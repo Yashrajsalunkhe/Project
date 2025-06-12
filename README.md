@@ -43,7 +43,7 @@ A modern, professional full-stack management dashboard built with React, Express
 
    ```bash
    git clone <repository-url>
-   cd rutuja_project
+   cd project
    ```
 
 2. Install all dependencies:
@@ -52,15 +52,7 @@ A modern, professional full-stack management dashboard built with React, Express
    npm run install:all
    ```
 
-3. Set up environment variables:
-
-   ```bash
-   cd backend
-   cp .env.example .env
-   # Edit .env with your MongoDB connection string
-   ```
-
-4. Start the development servers:
+3. Start the development servers:
 
    ```bash
    # From root directory - starts both frontend and backend
@@ -143,15 +135,3 @@ npm run test:api        # Test API endpoints
 - Interactive UI with hover effects, smooth animations, and loading states
 - Cultural Content with authentic Indian names and relevant post topics
 - Mobile Ready with fully responsive design for all devices
-
-## License
-
-MIT License - see the LICENSE file for details.
-
-## Author
-
-Developed with ❤️ for modern web applications.
-
----
-
-**Note**: This project showcases modern full-stack development with TypeScript, React 19, MongoDB, and professional UI design patterns.
