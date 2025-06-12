@@ -1,0 +1,35 @@
+{
+  "name": "rutuja-management-dashboard",
+  "version": "1.0.0",
+  "description": "A full-stack management dashboard with React frontend and Express backend",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"cd backend && bun run dev\" \"cd forntend && npm run dev\"",
+    "dev:backend": "cd backend && bun run dev",
+    "dev:frontend": "cd forntend && npm run dev",
+    "build": "cd forntend && npm run build",
+    "build:backend": "cd backend && bun run build",
+    "install:all": "cd backend && bun install && cd ../forntend && npm install",
+    "clean": "cd backend && rm -rf node_modules && cd ../forntend && rm -rf node_modules",
+    "test:api": "curl http://localhost:3001/health && curl http://localhost:3001/api/users"
+  },
+  "keywords": [
+    "react",
+    "express",
+    "typescript",
+    "vite",
+    "bun",
+    "fullstack",
+    "dashboard",
+    "management"
+  ],
+  "author": "Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "workspaces": [
+    "backend",
+    "forntend"
+  ]
+}

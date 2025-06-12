@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Management Dashboard - Vite + React + TS</title>
+    
+    <!-- Critical CSS to prevent navigation layout shifts -->
+    <style>
+      /* Prevent FOUC and layout shifts during initial load */
+      .app-header {
+        min-height: 140px !important;
+        max-height: 140px !important;
+        overflow: hidden !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 100 !important;
+      }
+      
+      .app-nav {
+        min-height: 64px !important;
+        height: 64px !important;
+        overflow: hidden !important;
+        display: flex !important;
+      }
+      
+      .nav-link {
+        min-height: 64px !important;
+        height: 64px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+      }
+      
+      .header-content {
+        min-height: 60px !important;
+        height: 60px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+      }
+      
+      /* Fix connection status box layout shifts */
+      .health-check-container {
+        min-width: 200px !important;
+        max-width: 220px !important;
+        min-height: 60px !important;
+        height: 60px !important;
+        overflow: hidden !important;
+        flex-shrink: 0 !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      
+      .status-indicator {
+        min-width: 120px !important;
+        flex: 1 !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      
+      .status-dot {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        min-height: 28px !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      
+      .status-info {
+        min-width: 70px !important;
+        flex: 1 !important;
+        overflow: hidden !important;
+      }
+      
+      .status-text, .status-time {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+      
+      .refresh-button {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        min-height: 36px !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+      
+      /* Mobile responsive critical styles */
+      @media (max-width: 768px) {
+        .app-header {
+          min-height: 120px !important;
+          max-height: 120px !important;
+        }
+        
+        .header-content {
+          min-height: 50px !important;
+          height: 50px !important;
+        }
+        
+        .app-nav {
+          min-height: 56px !important;
+          height: 56px !important;
+        }
+        
+        .nav-link {
+          min-height: 56px !important;
+          height: 56px !important;
+        }
+        
+        .health-check-container {
+          min-width: 160px !important;
+          max-width: 180px !important;
+          min-height: 50px !important;
+          height: 50px !important;
+        }
+        
+        .status-indicator {
+          min-width: 90px !important;
+        }
+        
+        .status-info {
+          min-width: 50px !important;
+        }
+        
+        .refresh-button {
+          width: 32px !important;
+          height: 32px !important;
+          min-width: 32px !important;
+          min-height: 32px !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .app-header {
+          min-height: 110px !important;
+          max-height: 110px !important;
+        }
+        
+        .header-content {
+          min-height: 45px !important;
+          height: 45px !important;
+        }
+        
+        .app-nav {
+          min-height: 52px !important;
+          height: 52px !important;
+        }
+        
+        .nav-link {
+          min-height: 52px !important;
+          height: 52px !important;
+        }
+        
+        .health-check-container {
+          min-width: 120px !important;
+          max-width: 140px !important;
+          min-height: 45px !important;
+          height: 45px !important;
+        }
+        
+        .status-indicator {
+          min-width: 60px !important;
+        }
+        
+        .status-info {
+          min-width: 30px !important;
+        }
+        
+        .refresh-button {
+          width: 28px !important;
+          height: 28px !important;
+          min-width: 28px !important;
+          min-height: 28px !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
